@@ -1,0 +1,11 @@
+{
+    "labels": [1, 2, 3, 4, 5],
+    "datasets": [
+        {
+            "label": "总评分",
+            "data": [30, 60, 59, 78, 79],
+            "backgroundColor": "rgba(24,128,255,0.8)",
+            "borderColor": "rgba(24,128,255,1)"
+        }
+    ]
+}

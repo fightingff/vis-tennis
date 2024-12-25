@@ -13,6 +13,16 @@ body {
   height: 100vh;
 }
 
+.title {
+  writing-mode: vertical-rl;
+  text-align: center;
+  padding: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #1890ff;
+  color: white;
+}
+
 /* 左侧部分 */
 .left-section {
   flex: 3;
@@ -21,27 +31,30 @@ body {
   background-color: #f9f9f9;
   border-right: 1px solid #ddd;
   padding: 20px;
+  height: 100vh;
 }
 
 /* 上边栏：动作切片选择（横排图标） */
 .top-bar {
   display: flex;
+  padding-right: 20%;
   justify-content: center;
-  padding: 10px;
 }
 
 /* 中间部分：包含图片区域和约束选择栏 */
 .middle-section {
-  flex: 11;
+  flex: 8;
   display: flex;
   flex-direction: row;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 /* 中间区域：两张图片 */
 .image-section {
-  flex: 10;
+  flex: 7;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 20px;
   overflow: hidden;
@@ -62,14 +75,28 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 /* 下方区域：关键信息分析 */
 .info-section {
   flex: 1;
   padding: 10px;
-  background-color: #e0e0e0;
-  border-top: 1px solid #ddd;
+  width: 80%;
+  align-self: center;
+  background-color: #f0f2f5; /* 添加背景颜色 */
+  border-radius: 10px; /* 添加圆角 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+  margin-top: 20px; /* 增加与上方内容的间距 */
+  text-align: center; /* 文字居中 */
+}
+
+.info-section p {
+  font-size: 20px; /* 增加字体大小 */
+  color: #333; /* 调整字体颜色 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 右侧部分：历史信息图表 */
@@ -79,6 +106,7 @@ body {
   flex-direction: column;
   background-color: #ffffff;
   padding: 20px;
+  height: 100vh;
 }
 
 /* 图表 */
@@ -91,8 +119,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80px;
-  height: 80px;
   font-size: large;
   border-radius: 50%;
   cursor: pointer;
@@ -104,6 +130,8 @@ body {
 .top-bar .icon-button {
   margin-left: 100px;
   margin-right: 100px;
+  width: 50px;
+  height: 50px;
 }
 
 .icon-button:hover {
@@ -133,4 +161,68 @@ body {
 /* 约束选择栏的图标悬停效果 */
 .constraint-sidebar .icon-button:hover {
   background-color: #d9d9d9;
+}
+
+/* 翻转按钮样式 */
+.flip-button {
+  transition: transform 0.3s, background-color 0.3s;
+  position: absolute;
+  left: -20px;
+  bottom: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+}
+
+.flip-button:hover {
+  transform: scale(1.2);
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* 帮助图标样式 */
+.help-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* 分数图标样式 */
+.score-icon {
+  width: 150px;
+  height: 150px;
+  font-size: 40px;
+  color: red;
+  margin-left: 10%;
+}
+
+.score-icon:hover{
+  transform: scale(1.2);
+}
+
+/* 分数和角度信息区域 */
+.score-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50px;
+}
+
+.angle-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.angle-info p {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.angle-value-user{
+  color: white;
+  background-color: orange;
+}
+
+.angle-value-std{
+  color: white;
+  background-color: #1890ff;
 }
